@@ -36,8 +36,8 @@
                 bitmap.SetPropertyItem(args.CustomData["ColorProfile"] as PropertyItem);
 
                 var memoryStream = new MemoryStream();
-                bitmap.Save(memoryStream, bitmap.RawFormat);                
-                args.OutputStream = new MediaStream(memoryStream, args.MediaData.Extension, args.MediaData.MediaItem);
+                bitmap.Save(memoryStream, bitmap.RawFormat);
+                args.OutputStream = new MediaStream(memoryStream, args.OutputStream.Extension, args.OutputStream.MediaItem);
             }
         }
     }
